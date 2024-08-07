@@ -1,0 +1,11 @@
+:root {
+    font-family: 'DM Sans', sans-serif;
+
+    /* Variables */
+
+    /* Colors */
+    --c-background-darkest: #121315;
+    --c-background-dark: #1C1D1F;
+    --c-foreground-1: #FEF7ED;
+    --c-foreground-2: #6F757A;
+}
