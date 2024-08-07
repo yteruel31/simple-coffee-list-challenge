@@ -2,23 +2,55 @@
 	import Card from '$lib/components/Card.svelte';
 	import Text from '$lib/components/Text.svelte';
 	import Stack from '$lib/components/Stack.svelte';
+	import Button from '$lib/components/Button.svelte';
+	import Center from '$lib/components/Center.svelte';
+
+	type State = 'all' | 'available';
 
 	export let data;
+
+	let state: State = 'all';
+	let filteredItems = data.items;
+
+	const handleClick = (_state: State) => {
+		state = _state;
+	};
+
+	$: filteredItems =
+		state === 'all' ? data.items : data.items.filter((item) => item.available);
 </script>
 
-<div class="vector" />
-<div class="container">
-	<Stack --gap="16px" --m="0 auto" --z-index="10">
-		<Text tag="h2" align="center" size="lg">Our Collection</Text>
-		<Text tag="p" color="secondary" align="center">
-			Introducing our Coffee Collection, a selection of unique coffees from different roast types
-			and origins, expertly roasted in small batches and shipped fresh weekly.
-		</Text>
-	</Stack>
+<div>
+	<div class="vector" />
+	<div class="container">
+		<Stack --gap="16px" --m="0 auto" --z-index="10">
+			<Text tag="h2" align="center" size="lg">Our Collection</Text>
+			<Text tag="p" color="secondary" align="center">
+				Introducing our Coffee Collection, a selection of unique coffees from
+				different roast types and origins, expertly roasted in small batches and
+				shipped fresh weekly.
+			</Text>
+		</Stack>
+	</div>
+</div>
+
+<div style:margin-bottom="20px">
+	<Center>
+		<Button
+			on:click={() => handleClick('all')}
+			color="secondary"
+			textColor="primary">All products</Button
+		>
+		<Button
+			on:click={() => handleClick('available')}
+			color="text"
+			textColor="primary">Available now</Button
+		>
+	</Center>
 </div>
 
 <div class="grid">
-	{#each data.items as item}
+	{#each filteredItems as item (item.id)}
 		<Card {...item} />
 	{/each}
 </div>
@@ -49,7 +81,7 @@
 	@media (min-width: 768px) {
 		.vector {
 			width: 100%;
-			height: 100%;
+			height: 20%;
 		}
 
 		.grid {

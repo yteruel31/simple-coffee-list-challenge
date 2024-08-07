@@ -32,6 +32,7 @@
 		margin: 0;
 		font-weight: 500;
 		z-index: var(--z-index);
+		width: var(--w);
 	}
 
 	h2 {
