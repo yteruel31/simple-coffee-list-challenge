@@ -25,19 +25,19 @@
 				--radius="20px">Popular</Badge
 			>
 		{/if}
-		<img src={image} alt={name} style:width="100%" />
+		<img class="cover" src={image} alt={name} />
 	</div>
 	<Group justify="space-between">
 		<Text>{name}</Text>
 		<Badge textProps={{ size: 'sm' }} color="success">{price}</Badge>
 	</Group>
-	<Group justify="space-between">
+	<Group justify="space-between" align="center">
 		{#if rating}
-			<Group align="center" --gap="10px">
+			<Group align="center" --gap="5px">
 				<img src="/Star_fill.svg" alt="star" />
 				<div>
-					<Text tag="span" color="secondary">{rating}</Text>
-					<Text tag="span" color="secondary">({votes})</Text>
+					<Text tag="span" color="primary">{rating}</Text>
+					<Text tag="span" color="secondary">({votes} votes)</Text>
 				</div>
 			</Group>
 		{:else}
@@ -55,7 +55,8 @@
 </Stack>
 
 <style>
-	img {
+	.cover {
 		border-radius: 10px;
+		width: 100%;
 	}
 </style>

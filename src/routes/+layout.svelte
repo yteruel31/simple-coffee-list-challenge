@@ -1,7 +1,6 @@
 <script>
 	import '../app.css';
 	import 'normalize.css';
-	import background from '/bg-cafe.jpg';
 </script>
 
 <svelte:head>
@@ -25,12 +24,8 @@
 </main>
 
 <style>
-	main {
+	:global(body) {
 		background-color: var(--c-background-darkest);
-		padding: 0;
-		margin: 0;
-		min-height: 100vh;
-		position: sticky;
 	}
 
 	img {
@@ -47,6 +42,7 @@
 		left: 0;
 		width: 100%;
 		padding-top: 150px;
+		padding-bottom: 100px;
 	}
 
 	.container {
@@ -60,6 +56,12 @@
 
 	.sub-container {
 		position: relative;
-		padding: 0 120px;
+		padding: 0 10px 30px;
+	}
+
+	@media (min-width: 768px) {
+		.sub-container {
+			padding: 0 120px 50px;
+		}
 	}
 </style>

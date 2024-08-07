@@ -10,7 +10,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: var(--gap);
-		width: var(--w);
 		margin: var(--m);
 		padding: var(--p);
 		z-index: var(--z-index);
