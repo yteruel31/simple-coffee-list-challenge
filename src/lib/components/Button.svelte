@@ -3,7 +3,7 @@
 	import type { ColorVariant } from '$lib/types';
 
 	export let color: ColorVariant = 'primary';
-	export let textColor: ColorVariant = 'text';
+	export let textColor: ColorVariant = 'primary';
 </script>
 
 <button

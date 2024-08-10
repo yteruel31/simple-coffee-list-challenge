@@ -38,13 +38,11 @@
 	<Center>
 		<Button
 			on:click={() => handleClick('all')}
-			color="secondary"
-			textColor="primary">All products</Button
+			color={state === 'all' ? 'secondary' : 'text'}>All products</Button
 		>
 		<Button
 			on:click={() => handleClick('available')}
-			color="text"
-			textColor="primary">Available now</Button
+			color={state === 'available' ? 'secondary' : 'text'}>Available now</Button
 		>
 	</Center>
 </div>
@@ -65,7 +63,7 @@
 	.vector {
 		position: absolute;
 		width: 50%;
-		height: 50%;
+		height: 10%;
 		top: 30px;
 		left: 50%;
 		background-image: url('/vector.svg');
