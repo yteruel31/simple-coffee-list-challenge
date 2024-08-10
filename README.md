@@ -1,38 +1,45 @@
-# create-svelte
+# Simple Coffee list
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+<div align="center"><img src="./overview.png" width=700 alt="image of desktop preview of coffee list"></div>
 
-## Creating a project
+Solution proposed for the challenge of the [DevChallenge](https://devchallenges.io/challenge/simple-coffee-listing) platform.
 
-If you're seeing this, you've probably already done this step. Congrats!
+Check the [demo](https://simple-coffee-list-challenge.vercel.app/).
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+## Todo list
 
-# create a new project in my-app
-npm create svelte@latest my-app
+- [x] Create a coffee listing page that matches the given design.
+- [x] Use React or other Front-end libraries for this challenge.
+- [x] Create a Reusable Card component.
+- [x] The card component should include a picture, name, pricing, rating, and number of votes if exists.
+- [x] The card component should render popular tag, availability status conditionally.
+- [x] Render Coffee list with given data. The data should come from a given API or downloaded JSON file.
+- [x] Users can choose to list all products or just available products.
+- [x] Deploy the solution and submit Repository URL and Demo URL.
+
+## Stack used
+
+- [Svelte](https://svelte.dev/)
+- [SvelteKit](https://kit.svelte.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## Installation
+
+To install the project, you need to have [Node.js](https://nodejs.org/en/) and [Yarn](https://yarnpkg.com/) installed on your computer.
+
+Then, you can clone the repository and install the dependencies:
+
+```sh
+yarn install
 ```
 
-## Developing
+## Usage
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+To start the project, you can run:
 
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+```sh
+yarn dev
 ```
 
-## Building
+This command starts the development server on [http://localhost:5173](http://localhost:5173).
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
